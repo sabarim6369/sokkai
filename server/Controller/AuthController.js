@@ -13,7 +13,6 @@ export const registerAdmin = async (req, res) => {
 
   try {
     const existingUser = await Admin.findOne({ email });
-
     if (existingUser) {
       return res.status(401).json({
         message: "User ID already exists",
